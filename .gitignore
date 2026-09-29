@@ -1,0 +1,23 @@
+# Credentials
+.env
+.env.*
+!.env.example
+
+# Output
+output/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+.claude/
+.DS_Store

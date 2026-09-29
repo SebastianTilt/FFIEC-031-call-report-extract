@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance" 
+xmlns:link="http://www.xbrl.org/2003/linkbase" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xbrli="http://www.xbrl.org/2003/instance" 
+xmlns:ffieci="https://www.cdr.ffiec.gov/cdr" 
+xmlns:iso4217="http://www.xbrl.org/2003/iso4217" 
+xmlns:ffiec041-2015-12-31="https://www.cdr.ffiec.gov/xbrl/call/report041/2015-12-31/v122" 
+xmlns:cc="https://www.cdr.ffiec.gov/xbrl/concepts"
+xsi:schemaLocation="https://www.cdr.ffiec.gov/xbrl/call/report041/2015-12-31/v122 https://www.cdr.ffiec.gov/xbrl/call/report041/2015-12-31/v122/call-report041-2015-12-31-v122.xsd https://www.cdr.ffiec.gov/xbrl/concepts https://www.cdr.ffiec.gov/xbrl/call/report041/2015-12-31/v122/concepts.xsd">
+  <link:schemaRef xlink:type="simple" xlink:href="https://www.cdr.ffiec.gov/xbrl/call/report041/2015-12-31/v122/call-report041-2015-12-31-v122.xsd" />
+  <link:schemaRef xlink:type="simple" xlink:href="https://www.cdr.ffiec.gov/xbrl/call/report041/2015-12-31/v122/concepts.xsd"/>
+  <context id="CI_1456501_2015-12-31">
+    <entity>
+      <identifier scheme="https://www.cdr.ffiec.gov/cdr">1456501</identifier>
+    </entity>
+    <period>
+      <instant>2015-12-31</instant>
+    </period>
+  </context>
+  <context id="CD_1456501_2015-12-31">
+    <entity>
+      <identifier scheme="https://www.cdr.ffiec.gov/cdr">1456501</identifier>
+    </entity>
+    <period>
+      <startDate>2015-01-01</startDate>
+      <endDate>2015-12-31</endDate>
+    </period>
+  </context>
+  <unit id="USD">
+    <measure>iso4217:USD</measure>
+  </unit>  
+  <unit id="PURE">
+    <measure>pure</measure>
+  </unit>  
+  <unit id="NON-MONETARY">
+    <measure>ffieci:nonMonetary</measure>
+  </unit>  
+  <cc:RCOA8274 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">13333000000</cc:RCOA8274>
+  <cc:RIAD4463 contextRef="CD_1456501_2015-12-31" unitRef="USD" decimals="0">-103000000</cc:RIAD4463>
+  <cc:RIADC387 contextRef="CD_1456501_2015-12-31" unitRef="USD" decimals="0">0</cc:RIADC387>
+  <cc:TEXTG581 contextRef="CI_1456501_2015-12-31"></cc:TEXTG581>
+  <cc:RCOA7204 contextRef="CI_1456501_2015-12-31" unitRef="PURE" decimals="6">0.1018</cc:RCOA7204>
+  <cc:RCONB987 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">0</cc:RCONB987>
+  <cc:TE02N528 contextRef="CI_1456501_2015-12-31">N/A</cc:TE02N528>
+  <cc:RCON0090 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">23924000000</cc:RCON0090>
+  <cc:RCON2215 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">10263000000</cc:RCON2215>
+  <cc:RCONB993 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">0</cc:RCONB993>
+  <cc:RCONB995 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">0</cc:RCONB995>
+  <cc:RCONB550 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">109389000000</cc:RCONB550>
+  <cc:RCON0211 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">1001000000</cc:RCON0211>
+  <cc:RCON2365 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">117262000000</cc:RCON2365>
+  <cc:RCONB989 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">3169000000</cc:RCONB989>
+  <cc:RCON2200 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">119652000000</cc:RCON2200>
+  <cc:RCON5597 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">42750000000</cc:RCON5597>
+  <cc:RCONK222 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">0</cc:RCONK222>
+  <cc:RCON2170 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">136028000000</cc:RCON2170>
+  <cc:RCON1287 contextRef="CI_1456501_2015-12-31" unitRef="USD" decimals="0">19619000000</cc:RCON1287>
+</xbrl>

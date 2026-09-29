@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance" 
+xmlns:link="http://www.xbrl.org/2003/linkbase" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xbrli="http://www.xbrl.org/2003/instance" 
+xmlns:ffieci="https://www.cdr.ffiec.gov/cdr" 
+xmlns:iso4217="http://www.xbrl.org/2003/iso4217" 
+xmlns:ffiec031-2026-03-31="https://www.cdr.ffiec.gov/xbrl/call/report031/2026-03-31/v294" 
+xmlns:cc="https://www.cdr.ffiec.gov/xbrl/call/concepts"
+xsi:schemaLocation="https://www.cdr.ffiec.gov/xbrl/call/report031/2026-03-31/v294 https://www.cdr.ffiec.gov/xbrl/call/report031/2026-03-31/v294/call-report031-2026-03-31-v294.xsd https://www.cdr.ffiec.gov/xbrl/call/concepts https://www.cdr.ffiec.gov/xbrl/call/report031/2026-03-31/v294/concepts.xsd">
+  <link:schemaRef xlink:type="simple" xlink:href="https://www.cdr.ffiec.gov/xbrl/call/report031/2026-03-31/v294/call-report031-2026-03-31-v294.xsd" />
+  <link:schemaRef xlink:type="simple" xlink:href="https://www.cdr.ffiec.gov/xbrl/call/report031/2026-03-31/v294/concepts.xsd"/>
+  <context id="CI_852218_2026-03-31">
+    <entity>
+      <identifier scheme="https://www.cdr.ffiec.gov/cdr">852218</identifier>
+    </entity>
+    <period>
+      <instant>2026-03-31</instant>
+    </period>
+  </context>
+  <context id="CD_852218_2026-03-31">
+    <entity>
+      <identifier scheme="https://www.cdr.ffiec.gov/cdr">852218</identifier>
+    </entity>
+    <period>
+      <startDate>2026-01-01</startDate>
+      <endDate>2026-03-31</endDate>
+    </period>
+  </context>
+  <unit id="USD">
+    <measure>iso4217:USD</measure>
+  </unit>  
+  <unit id="PURE">
+    <measure>pure</measure>
+  </unit>  
+  <unit id="NON-MONETARY">
+    <measure>ffieci:nonMonetary</measure>
+  </unit>  
+  <cc:RIADC387 contextRef="CD_852218_2026-03-31" unitRef="USD" decimals="0">12000000</cc:RIADC387>
+  <cc:RCFDJ262 contextRef="CI_852218_2026-03-31" unitRef="NON-MONETARY" decimals="0">53328</cc:RCFDJ262>
+  <cc:RCONPG75 contextRef="CI_852218_2026-03-31">true</cc:RCONPG75>
+  <cc:RCFD2170 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">4016571000000</cc:RCFD2170>
+  <cc:TE02N528 contextRef="CI_852218_2026-03-31">www.jpmorgan.com</cc:TE02N528>
+  <cc:RCFD0082 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">842000000</cc:RCFD0082>
+  <cc:RCFD0071 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">295663000000</cc:RCFD0071>
+  <cc:RCFDA549 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">58931000000</cc:RCFDA549>
+  <cc:RCFDA554 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">29502000000</cc:RCFDA554>
+  <cc:RCFDA550 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">58659000000</cc:RCFDA550>
+  <cc:RCFDA551 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">145852000000</cc:RCFDA551>
+  <cc:RCFDA552 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">251422000000</cc:RCFDA552>
+  <cc:RCFDA553 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">109853000000</cc:RCFDA553>
+  <cc:RCON1287 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">355986000000</cc:RCON1287>
+  <cc:RCFAP870 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">23442000000</cc:RCFAP870>
+  <cc:RCFW7206 contextRef="CI_852218_2026-03-31" unitRef="PURE" decimals="6">0.158816</cc:RCFW7206>
+  <cc:RCONB995 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">19561000000</cc:RCONB995>
+  <cc:RCFAH015 contextRef="CD_852218_2026-03-31" unitRef="USD" decimals="0">4723218000000</cc:RCFAH015>
+  <cc:RCFD0213 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">134411000000</cc:RCFD0213>
+  <cc:RCFD0211 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">141204000000</cc:RCFD0211>
+  <cc:RIAD4521 contextRef="CD_852218_2026-03-31" unitRef="USD" decimals="0">-2000000</cc:RIAD4521>
+  <cc:RCFAA224 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">3878451000000</cc:RCFAA224>
+  <cc:RCFD3190 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">269093000000</cc:RCFD3190>
+  <cc:RCONK222 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">188154000000</cc:RCONK222>
+  <cc:RCONB989 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">102818000000</cc:RCONB989>
+  <cc:RCONB550 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">1586572000000</cc:RCONB550>
+  <cc:RCFAH036 contextRef="CI_852218_2026-03-31" unitRef="PURE" decimals="6">0.062618</cc:RCFAH036>
+  <cc:RCFN2200 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">578171000000</cc:RCFN2200>
+  <cc:RCFD3365 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">373578000000</cc:RCFD3365>
+  <cc:RCON2200 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">2209823000000</cc:RCON2200>
+  <cc:RCFD0070 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">227878000000</cc:RCFD0070>
+  <cc:RCON0090 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">71339000000</cc:RCON0090>
+  <cc:RCFDB571 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">69154000000</cc:RCFDB571>
+  <cc:RCON2365 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">49354000000</cc:RCON2365>
+  <cc:RCFDB995 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">257320000000</cc:RCFDB995>
+  <cc:RCFD3819 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">70496000000</cc:RCFD3819>
+  <cc:RCON2215 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">536852000000</cc:RCON2215>
+  <cc:RCFD3353 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">234629000000</cc:RCFD3353>
+  <cc:RCFD3355 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">269070000000</cc:RCFD3355>
+  <cc:RCFDB558 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">477389000000</cc:RCFDB558>
+  <cc:RCFD3433 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">849039000000</cc:RCFD3433>
+  <cc:RCFD3432 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">800975000000</cc:RCFD3432>
+  <cc:RCFDB989 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">393116000000</cc:RCFDB989>
+  <cc:RCON0070 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">689000000</cc:RCON0070>
+  <cc:RCONB987 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">0</cc:RCONB987>
+  <cc:RCFD3210 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">335931000000</cc:RCFD3210>
+  <cc:RCFA7206 contextRef="CI_852218_2026-03-31" unitRef="PURE" decimals="6">0.150792</cc:RCFA7206>
+  <cc:RCFA7204 contextRef="CI_852218_2026-03-31" unitRef="PURE" decimals="6">0.076257</cc:RCFA7204>
+  <cc:RCON0082 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">383000000</cc:RCON0082>
+  <cc:RCON0211 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">141204000000</cc:RCON0211>
+  <cc:RCFA8274 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">295758000000</cc:RCFA8274>
+  <cc:RCFD1287 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">355986000000</cc:RCFD1287>
+  <cc:RCFD1286 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">355928000000</cc:RCFD1286>
+  <cc:RCONB993 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">217000000</cc:RCONB993>
+  <cc:RCFA3792 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">318780000000</cc:RCFA3792>
+  <cc:RCON5597 contextRef="CI_852218_2026-03-31" unitRef="USD" decimals="0">1287930000000</cc:RCON5597>
+</xbrl>

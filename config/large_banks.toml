@@ -1,0 +1,280 @@
+# Treasury holdings, funding and capital for the largest U.S. commercial banks.
+#
+# Labels follow the Federal Reserve MDRM dictionary and FFIEC short
+# definitions. Schedule/line references are from the 2026 FFIEC 031 and may
+# differ in earlier years. Prefixes: RCFD/RCFA/RCFW = consolidated bank,
+# RCON = domestic offices, RCFN = foreign offices. Units come from each filing.
+
+[run]
+start = "2011Q4"
+end = "latest"
+workers = 4
+requests_per_hour = 2400   # FFIEC allows about 2,500 and suggests 1.5 s spacing
+
+[output]
+dir = "output"
+name = "call_report_large_banks"
+format = "xlsx"            # or "csv"
+
+# --- Banks ------------------------------------------------------------------
+# rssd_id: the Federal Reserve's institution identifier (search the FFIEC NIC).
+
+[[banks]]
+name = "JPMorgan Chase Bank, N.A."
+rssd_id = 852218
+fed_district = "New York"
+
+[[banks]]
+name = "Bank of America, N.A."
+rssd_id = 480228
+fed_district = "Richmond"
+
+[[banks]]
+name = "Citibank, N.A."
+rssd_id = 476810
+fed_district = "New York"
+
+[[banks]]
+name = "Wells Fargo Bank, N.A."
+rssd_id = 451965
+fed_district = "San Francisco"
+
+[[banks]]
+name = "U.S. Bank National Association"
+rssd_id = 504713
+fed_district = "Minneapolis"
+
+[[banks]]
+name = "Goldman Sachs Bank USA"
+rssd_id = 2182786
+fed_district = "New York"
+
+[[banks]]
+name = "Morgan Stanley Bank, N.A."
+rssd_id = 1456501
+fed_district = "New York"
+
+# --- Treasury securities ------------------------------------------------------
+
+[[fields]]
+mdrm = "RCFD0211"
+label = "U.S. Treasury securities, held-to-maturity, amortized cost (RC-B 1)"
+
+[[fields]]
+mdrm = "RCFD0213"
+label = "U.S. Treasury securities, held-to-maturity, fair value (RC-B 1)"
+
+[[fields]]
+mdrm = "RCFD1286"
+label = "U.S. Treasury securities, available-for-sale, amortized cost (RC-B 1)"
+
+[[fields]]
+mdrm = "RCFD1287"
+label = "U.S. Treasury securities, available-for-sale, fair value (RC-B 1)"
+
+[[fields]]
+mdrm = "RCON0211"
+label = "U.S. Treasury securities, held-to-maturity, amortized cost, domestic offices (RC-H 10)"
+
+[[fields]]
+mdrm = "RCON1287"
+label = "U.S. Treasury securities, available-for-sale, fair value, domestic offices (RC-H 10)"
+
+[[fields]]
+mdrm = "RCFDB558"
+label = "Quarterly average: U.S. Treasury and U.S. Government agency obligations, excluding MBS (RC-K 2)"
+
+# --- Maturity and repricing (RC-B Memorandum 2.a) -----------------------------
+# Covers Treasury, agency, municipal and other non-mortgage debt securities, and
+# mortgage pass-throughs other than those backed by closed-end first-lien 1-4
+# family residential mortgages. It is not all debt securities.
+
+[[fields]]
+mdrm = "RCFDA549"
+label = "Non-mortgage debt securities etc., remaining maturity or repricing: 3 months or less (RC-B M2.a.1)"
+
+[[fields]]
+mdrm = "RCFDA550"
+label = "Non-mortgage debt securities etc., remaining maturity or repricing: over 3 through 12 months (RC-B M2.a.2)"
+
+[[fields]]
+mdrm = "RCFDA551"
+label = "Non-mortgage debt securities etc., remaining maturity or repricing: over 1 through 3 years (RC-B M2.a.3)"
+
+[[fields]]
+mdrm = "RCFDA552"
+label = "Non-mortgage debt securities etc., remaining maturity or repricing: over 3 through 5 years (RC-B M2.a.4)"
+
+[[fields]]
+mdrm = "RCFDA553"
+label = "Non-mortgage debt securities etc., remaining maturity or repricing: over 5 through 15 years (RC-B M2.a.5)"
+
+[[fields]]
+mdrm = "RCFDA554"
+label = "Non-mortgage debt securities etc., remaining maturity or repricing: over 15 years (RC-B M2.a.6)"
+
+# --- Fed funds and repos ------------------------------------------------------
+
+[[fields]]
+mdrm = "RCONB987"
+label = "Federal funds sold in domestic offices (RC 3.a)"
+
+[[fields]]
+mdrm = "RCFDB989"
+label = "Securities purchased under agreements to resell (RC 3.b)"
+
+[[fields]]
+mdrm = "RCONB989"
+label = "Securities purchased under agreements to resell, domestic offices (RC-H 3)"
+
+[[fields]]
+mdrm = "RCFD3365"
+label = "Quarterly average: federal funds sold and securities purchased under agreements to resell (RC-K 5)"
+
+[[fields]]
+mdrm = "RCONB993"
+label = "Federal funds purchased in domestic offices (RC 14.a)"
+
+[[fields]]
+mdrm = "RCFDB995"
+label = "Securities sold under agreements to repurchase (RC 14.b)"
+
+[[fields]]
+mdrm = "RCONB995"
+label = "Securities sold under agreements to repurchase, domestic offices (RC-H 4)"
+
+[[fields]]
+mdrm = "RCFD3353"
+label = "Quarterly average: federal funds purchased and securities sold under agreements to repurchase (RC-K 13)"
+
+# --- Cash and balances due ----------------------------------------------------
+
+[[fields]]
+mdrm = "RCFD0071"
+label = "Interest-bearing balances due from depository institutions (RC 1.b)"
+
+[[fields]]
+mdrm = "RCON0090"
+label = "Balances due from Federal Reserve Banks, domestic offices (RC-A 4)"
+
+[[fields]]
+mdrm = "RCFD0082"
+label = "Balances due from depository institutions in the U.S. (RC-A 2)"
+notes = "In filings from 2018-06-30. Before that the MDRM dictionary lists it as a derived FFIEC 031 item, which is not in the filing."
+
+[[fields]]
+mdrm = "RCON0082"
+label = "Balances due from depository institutions in the U.S., domestic offices (RC-A 2)"
+
+[[fields]]
+mdrm = "RCFD0070"
+label = "Balances due from banks in foreign countries and foreign central banks (RC-A 3)"
+notes = "In filings from 2018-06-30. Before that the MDRM dictionary lists it as a derived FFIEC 031 item, which is not in the filing."
+
+[[fields]]
+mdrm = "RCON0070"
+label = "Balances due from banks in foreign countries and foreign central banks, domestic offices (RC-A 3)"
+
+# --- Deposits -----------------------------------------------------------------
+
+[[fields]]
+mdrm = "RCON2200"
+label = "Total deposits in domestic offices (RC 13.a)"
+
+[[fields]]
+mdrm = "RCFN2200"
+label = "Total deposits in foreign offices (RC-E Part II 6)"
+
+[[fields]]
+mdrm = "RCON2215"
+label = "Total transaction accounts, domestic offices (RC-E Part I 7, column A)"
+
+[[fields]]
+mdrm = "RCONB550"
+label = "Nontransaction accounts of individuals, partnerships and corporations, domestic offices (RC-E Part I 1, column C)"
+notes = "Earlier scripts labeled this 'Noninterest-bearing demand deposits', which the MDRM dictionary contradicts."
+
+[[fields]]
+mdrm = "RCON2365"
+label = "Total brokered deposits (RC-E Memo 1.b)"
+
+[[fields]]
+mdrm = "RCON5597"
+label = "Estimated uninsured deposits in domestic offices and insured U.S.-territory branches (RC-O Memo 2)"
+
+[[fields]]
+mdrm = "RCONK222"
+label = "Time deposits over $250,000 with a remaining maturity of one year or less (RC-E Memo 4)"
+
+# --- Borrowings and off-balance-sheet -----------------------------------------
+
+[[fields]]
+mdrm = "RCFD3190"
+label = "Other borrowed money, total (RC-M 5.c)"
+
+[[fields]]
+mdrm = "RCFDB571"
+label = "Other borrowings with a remaining maturity of one year or less (RC-M 5.b.2)"
+
+[[fields]]
+mdrm = "RCFD3355"
+label = "Quarterly average: other borrowed money (RC-K 14)"
+
+[[fields]]
+mdrm = "RCFD3819"
+label = "Financial standby letters of credit and foreign office guarantees (RC-L 2)"
+
+[[fields]]
+mdrm = "RCFD3433"
+label = "Securities lent (RC-L 6.a)"
+
+[[fields]]
+mdrm = "RCFD3432"
+label = "Securities borrowed (RC-L 6.b)"
+
+# --- Capital ------------------------------------------------------------------
+# The revised Schedule RC-R codes (RCFA/RCFW) start 2014-03-31 per the MDRM
+# dictionary; earlier periods used different codes and are reported as missing.
+
+[[fields]]
+mdrm = "RCFD3210"
+label = "Total bank equity capital (RC 27.a)"
+
+[[fields]]
+mdrm = "RCFA8274"
+label = "Tier 1 capital (RC-R Part I 26)"
+
+[[fields]]
+mdrm = "RCFAP870"
+label = "Tier 2 capital before deductions (RC-R Part I 44.a)"
+
+[[fields]]
+mdrm = "RCFA3792"
+label = "Total capital (RC-R Part I 47.a)"
+
+[[fields]]
+mdrm = "RCFAA224"
+label = "Total assets for the leverage ratio (RC-R Part I 30)"
+
+[[fields]]
+mdrm = "RCFA7204"
+label = "Tier 1 leverage ratio (RC-R Part I 31)"
+
+[[fields]]
+mdrm = "RCFA7206"
+label = "Tier 1 risk-based capital ratio, column A (RC-R Part I 50)"
+
+[[fields]]
+mdrm = "RCFW7206"
+label = "Tier 1 risk-based capital ratio, column B: advanced approaches banks that exited parallel run (RC-R Part I 50)"
+notes = "Bank-level, like every Call Report item. Earlier scripts mislabeled it 'Consolidated/HoldCo'."
+
+[[fields]]
+mdrm = "RCFAH015"
+label = "Total leverage exposure (RC-R Part I 55.a)"
+notes = "MDRM start date 2016-09-30."
+
+[[fields]]
+mdrm = "RCFAH036"
+label = "Supplementary leverage ratio (RC-R Part I 55.b)"
+notes = "MDRM start date 2016-09-30; the MDRM item name marks it advanced approaches only."
