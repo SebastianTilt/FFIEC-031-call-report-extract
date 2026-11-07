@@ -12,7 +12,7 @@ from .periods import parse_quarter
 
 MDRM_PATTERN = re.compile(r"^[A-Z0-9]{4}[A-Z0-9]{4}$")
 FORMATS = ("xlsx", "csv")
-MAX_WORKERS = 8
+MAX_WORKERS = 16
 
 
 class ConfigError(ValueError):

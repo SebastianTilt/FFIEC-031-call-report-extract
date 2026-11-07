@@ -8,8 +8,8 @@
 [run]
 start = "2011Q4"
 end = "latest"
-workers = 4
-requests_per_hour = 2400   # FFIEC allows about 2,500 and suggests 1.5 s spacing
+workers = 12
+requests_per_hour = 2400   # cap per rolling hour; FFIEC allows about 2,500
 
 [output]
 dir = "output"

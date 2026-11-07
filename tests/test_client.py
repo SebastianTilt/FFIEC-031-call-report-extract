@@ -173,17 +173,26 @@ def test_credentials_from_env(monkeypatch, valid_token):
     assert Credentials.from_env().username == "user1"
 
 
-def test_rate_limiter_spaces_requests():
+def test_rate_limiter_bursts_then_waits_for_the_window():
     clock = [0.0]
     sleeps = []
 
     def sleep(seconds):
         sleeps.append(seconds)
 
-    limiter = RateLimiter(2400, clock=lambda: clock[0], sleep=sleep)
+    limiter = RateLimiter(3, clock=lambda: clock[0], sleep=sleep)
     for _ in range(3):
         limiter.acquire()
-    assert sleeps == [1.5, 3.0]  # three immediate calls are spaced 1.5 s apart
+    assert sleeps == []  # under the hourly cap: no waiting at all
+
+    clock[0] = 100.0
+    limiter.acquire()
+    limiter.acquire()
+    assert sleeps == [3500.0, 3500.0]  # cap reached: wait until the oldest starts are an hour old
+
+    clock[0] = 3601.0
+    limiter.acquire()
+    assert sleeps == [3500.0, 3500.0]  # third original start has left the window
 
 
 def test_error_body_formats(valid_token):

@@ -39,8 +39,8 @@ callreport run --config my.toml --start 2020Q1 --end 2024Q4 --format csv --out-d
 callreport --help
 ```
 
-A full run of the example config (413 filings) takes about 10 minutes, because requests are
-spaced to stay under FFIEC's hourly limit.
+A full run of the example config (about 420 filings) takes a minute or two. Requests run at full
+speed and only pause if a run would exceed FFIEC's hourly limit.
 
 ## Credentials
 
@@ -68,7 +68,7 @@ complete example: 7 large banks and 50 Treasury, funding and capital items since
 [run]
 start = "2011Q4"          # YYYYQn or a quarter-end date
 end = "latest"            # newest published quarter
-workers = 4               # concurrent requests (1-8)
+workers = 12              # concurrent requests (1-16)
 requests_per_hour = 2400  # shared across workers; FFIEC allows about 2,500
 
 [output]
@@ -163,7 +163,8 @@ and on observed server behavior:
   | `429`, other `5xx`, timeouts | Transient | Retried with exponential backoff, honoring `Retry-After` |
 
 - One `httpx.Client` and one thread-safe rate limiter are shared by all worker threads. The limiter
-  spaces requests 1.5 s apart by default, as FFIEC recommends.
+  caps request starts per rolling hour (2,400 by default, under FFIEC's ~2,500) without spacing
+  them out, so runs within the hourly budget go at full speed.
 - XBRL is parsed with `defusedxml`, which blocks entity expansion and external entities. Each filing
   is checked for the expected RSSD ID and report date, and conflicting duplicate facts are rejected.
 
