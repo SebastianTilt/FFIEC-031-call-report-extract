@@ -10,10 +10,11 @@ limiter, targeted retries and safe XML parsing.
 
 ```text
 $ callreport run --config config/large_banks.toml
-18:05:53 INFO    7 banks x 59 quarters (2011-12-31 to 2026-06-30) = 413 filings, 50 fields, 4 workers
+16:06:40 INFO    7 banks x 60 quarters (2011-12-31 to 2026-09-30) = 420 filings, 50 fields, 12 workers
 ...
-18:16:12 INFO    Filings: {'filed': 413}
-18:16:12 INFO    Wrote output/call_report_large_banks.xlsx
+16:08:06 INFO    Filings: {'filed': 420}
+16:08:06 INFO    Wrote output/call_report_large_banks.xlsx
+16:08:06 INFO    Done in 1.5 minutes
 ```
 
 ## Quick start
